@@ -36,3 +36,161 @@
     transform: rotate(360deg);
   }
 }
+
+html * {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* Start Page */
+.start-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(161, 157, 152);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.page-button {
+  display: block;
+  height: 100px;
+  width: 150px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 20px;
+  border: 3px solid rgb(80, 79, 78);
+  background-color: rgb(107, 109, 109);
+  appearance: none;
+  color: antiquewhite;
+}
+.page-button:active {
+  font-size: 24px;
+  width: 145px;
+  height: 95px;
+  
+}
+
+/* End Page */
+.end-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(161, 157, 152);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.end-page-container {
+  width: 15vw;
+  height: 300px;  
+}
+.end-page-container > div {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameWon {
+  background-color: rgb(106, 228, 106);
+}
+.gameLose {
+  background-color: rgb(230, 111, 111);
+}
+
+/* Game page */
+.game-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(161, 157, 152);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr 6fr 6fr;
+  grid-template-areas: 
+    'n n'
+    'w i'
+    'k k';
+}
+/* Game Name */
+.game-name {
+  grid-area: n;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(107, 109, 109);
+  border: 3px solid rgb(80, 79, 78);
+  border-radius: 5px;
+  margin: 1%;
+  color:antiquewhite;
+}
+/* Displayed word block */
+.displayed-word-container {
+  grid-area: w;
+}
+.displayed-word {
+  display: flex;
+  justify-content: center;
+  padding: 10% 0 10% 0;
+}
+.displayed-letter {
+  display: inline-block;
+  height: 30px;
+  width: 20px;
+  margin: 0 1% 0 1%;
+}
+.hint {
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+}
+.hint > span {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.hangman-img {
+  grid-area: i;
+}
+
+/* Keyboard */
+.keyboard {
+  grid-area: k;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: 1%;
+}
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+.key > div {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+  border: 3px solid rgb(80, 79, 78);
+  background-color: rgb(107, 109, 109);
+  color: antiquewhite;
+  border-radius: 5px;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notPressed > div:hover {
+  font-size: 25px;
+  height: 80%;
+  width: 80%;
+
+}
+.rightLetter > div {
+  background-color: rgb(106, 228, 106);
+}
+.notRightLetter > div {
+  background-color: rgb(230, 111, 111);
+}

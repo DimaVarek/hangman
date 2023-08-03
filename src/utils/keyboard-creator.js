@@ -1,0 +1,30 @@
+export default function keyboardCreator () {
+    return [
+        {key: 'q', keyStatus: 'notPressed'},
+        {key: 'w', keyStatus: 'notPressed'},
+        {key: 'e', keyStatus: 'notPressed'},
+        {key: 'r', keyStatus: 'notPressed'},
+        {key: 't', keyStatus: 'notPressed'},
+        {key: 'y', keyStatus: 'notPressed'},
+        {key: 'u', keyStatus: 'notPressed'},
+        {key: 'i', keyStatus: 'notPressed'},
+        {key: 'o', keyStatus: 'notPressed'},
+        {key: 'p', keyStatus: 'notPressed'},
+        {key: 'a', keyStatus: 'notPressed'},
+        {key: 's', keyStatus: 'notPressed'},
+        {key: 'd', keyStatus: 'notPressed'},
+        {key: 'f', keyStatus: 'notPressed'},
+        {key: 'g', keyStatus: 'notPressed'},
+        {key: 'h', keyStatus: 'notPressed'},
+        {key: 'j', keyStatus: 'notPressed'},
+        {key: 'k', keyStatus: 'notPressed'},
+        {key: 'l', keyStatus: 'notPressed'},
+        {key: 'z', keyStatus: 'notPressed'},
+        {key: 'x', keyStatus: 'notPressed'},
+        {key: 'c', keyStatus: 'notPressed'},
+        {key: 'v', keyStatus: 'notPressed'},
+        {key: 'b', keyStatus: 'notPressed'},
+        {key: 'n', keyStatus: 'notPressed'},
+        {key: 'm', keyStatus: 'notPressed'}
+    ]
+}
