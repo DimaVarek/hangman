@@ -39,10 +39,10 @@ export default function Game (props) {
             newGameState.attempts -= 1
         }
         if (checkWin(newGameState.displayedWord)) {
-            props.gameWon()
+            setTimeout(props.gameWon, 500)
         }
         if (checkLose(newGameState.attempts)) {
-            props.gameLose()
+            setTimeout(props.gameLose, 500)
         }
         setGameState(newGameState)
     }
