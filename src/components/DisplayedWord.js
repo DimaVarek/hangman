@@ -7,10 +7,12 @@ export default function DisplayedWord (props) {
     }
     return (
         <div className="displayed-word-container">
+            <div>
                 <div className="displayed-word">
                     {letterArray}
                 </div>
                 <p className="hint">Hint:&nbsp;<span>{props.hint}</span></p>
+            </div>
         </div>
 
     )
