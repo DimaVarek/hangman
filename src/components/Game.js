@@ -5,19 +5,23 @@ import createDisplayedWord from "../utils/create-displayed-word"
 import { checkLose, checkWin } from "../utils/check"
 import DisplayedWord from "./DisplayedWord"
 import HangmanImage from "./HangmanImage"
+import randomWord from "../utils/words"
+
 
 export default function Game (props) {
-    let secretWord = "cats"
+    let wordObj = randomWord()
+    let secretWord = wordObj.word
+    let hint = wordObj.hint
+
     let displayedWord = createDisplayedWord(secretWord, [])
-    let hint = "Ameer loves"
     let keybord = keyboardCreator()
     
     let [gameState, setGameState] = useState(
         {
             secretWord: secretWord,
+            hint: hint,
             displayedWord: displayedWord,
             openedLetters: [],
-            hint: hint,
             keybord: keybord,
             attempts: 9
         }
