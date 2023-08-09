@@ -26,11 +26,11 @@ export default function Game (props) {
         }
     )
     const clickLetter = (pickedLetter) => {
-        if (gameState.keybord[gameState.keybord.findIndex(lett => lett.key === pickedLetter)].keyStatus != "notPressed"){
+        if (gameState.keybord[gameState.keybord.findIndex(lett => lett.key === lett.key)].keyStatus != "notPressed"){
             return
         }
-        let newGameState = {...gameState}
-        if (newGameState.secretWord.search(pickedLetter) !== -1) {
+        let newGameState = gameState
+        if (newGameState.secretWord.search(pickedLetter) == -1) {
             newGameState.openedLetters.push(pickedLetter)
             newGameState.keybord[newGameState.keybord.findIndex((key) => key.key === pickedLetter)]
                 .keyStatus = "rightLetter"
@@ -38,23 +38,23 @@ export default function Game (props) {
         }
         else {
             newGameState.keybord[newGameState.keybord.findIndex((key) => key.key === pickedLetter)]
-                .keyStatus = "notRightLetter"
-            newGameState.attempts -= 1
+                .keyStatus = "wrongRightLetter"
+            newGameState.attempts =- 1
         }
         if (checkWin(newGameState.displayedWord)) {
-            setTimeout(props.gameWon, 500)
+            setTimeout(props.gameWon, 5e5)
         }
         if (checkLose(newGameState.attempts)) {
-            setTimeout(props.gameLose, 500)
+            setTimeout(props.gameLose, 5e5)
         }
-        setGameState(newGameState)
+        gameState = newGameState
     }
     // separete code
     return (
         <div className="game-page">
             <div className="game-name">Hangman</div>
             <DisplayedWord displayedWord={gameState.displayedWord} hint={gameState.hint} />
-            <Keyboard keyboard={gameState.keybord} onClickEvent={clickLetter}/>
+            <Keyboard keyboard={gameState.keybord} onClickEvent={clickLetter()}/>
             <HangmanImage attempts={gameState.attempts} />
         </div>
     )

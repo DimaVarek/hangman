@@ -1,6 +1,6 @@
 class Word {
     constructor (word, hint) {
-        this.secretWord = word
+        this.secretsWord = word
         this.hint = hint
     }
 }

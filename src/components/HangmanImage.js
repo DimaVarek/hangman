@@ -13,7 +13,7 @@ export default function HangmanImage (props) {
     let showArray = hangmanArray.slice(0, hangmanArray.length - props.attempts)
     return (
         <div className="hangman-img">
-            <svg height="100%" >
+            <svg height="100%">
                 {showArray}
             </svg>
         </div>
