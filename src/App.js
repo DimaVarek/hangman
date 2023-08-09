@@ -6,12 +6,12 @@ import EndPage from './components/EndPage';
 
 function App() {
   let [appState, setAppState] = useState('startPage') //startPage
-  const startGame = () => setAppState("inGame")
-  const gameWon = () => setAppState("gameWon")
+  const startGame = () => setAppState("inGame") // change to config
+  const gameWon = () => setAppState("gameWon") // change to one function
   const gameLose = () => setAppState("gameLose")
-  const currentPage = () => {
+  const getCurrentPage = () => {
     if (appState === "startPage") {
-      return (<StartPage startGame={startGame}/>)
+      return (<StartPage startGame={startGame}/>) // create a map
     } else if (appState === "inGame") {
       return (<Game gameWon={gameWon} gameLose={gameLose}/>)
     }
@@ -21,7 +21,7 @@ function App() {
     }
   }
   return (
-    currentPage()
+    getCurrentPage()
   );
 }
 

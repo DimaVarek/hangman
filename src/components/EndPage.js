@@ -1,4 +1,5 @@
-import Button from "./Button";
+import CONFIG from "../utils/config";
+import {Button as GameButton} from "./Button";
 
 export default function EndPage (props) {
     let className ="end-page " + props.appState
@@ -6,10 +7,10 @@ export default function EndPage (props) {
         <div className={className}>
             <div className="end-page-container">
                 <div>
-                    <p>{props.appState === "gameWon" ? "Game Won!": "Game lose :("}</p>
+                    <p>{props.appState === "gameWon" ? CONFIG.GAME_WON: "Game lose :("}</p>
                 </div>
                 <div>
-                    <Button buttonClassName={"restart"} onClickEvent={props.startGame} text={"Restart"}/>
+                    <GameButton buttonClassName={"restart"} onClickEvent={props.startGame} text={"Restart"}/>
                 </div>
             </div>
         </div>

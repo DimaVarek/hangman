@@ -5,13 +5,12 @@ import createDisplayedWord from "../utils/create-displayed-word"
 import { checkLose, checkWin } from "../utils/check"
 import DisplayedWord from "./DisplayedWord"
 import HangmanImage from "./HangmanImage"
-import randomWord from "../utils/words"
+import solution from "../utils/words"
 
 
 export default function Game (props) {
-    let wordObj = randomWord()
-    let secretWord = wordObj.word
-    let hint = wordObj.hint
+    const wordObj = solution()
+    const {secretWord, hint} = wordObj
 
     let displayedWord = createDisplayedWord(secretWord, [])
     let keybord = keyboardCreator()
@@ -50,7 +49,7 @@ export default function Game (props) {
         }
         setGameState(newGameState)
     }
-    
+    // separete code
     return (
         <div className="game-page">
             <div className="game-name">Hangman</div>

@@ -1,12 +1,12 @@
 class Word {
     constructor (word, hint) {
-        this.word = word
+        this.secretWord = word
         this.hint = hint
     }
 }
 const words = [
-    new Word("cats", "Ameer loves"),
-    new Word("dogs", "Ameer doesn`t love"),
+    new Word("apple", "Ameer loves"),
+    new Word("apple", "Ameer doesn`t love"),
     new Word("apple", "Newton's assistant")
 ]
 export default function randomWord () {

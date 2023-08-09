@@ -7,3 +7,4 @@ export default function Keyboard (props) {
         </div>
     )
 }
+// remove onClockEvent in keystatus != notPressed
