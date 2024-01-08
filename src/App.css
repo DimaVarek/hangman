@@ -131,6 +131,7 @@ html * {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 50%;
 }
 .displayed-word {
   display: flex;
@@ -159,6 +160,7 @@ html * {
   justify-content: center;
   align-items: center;
   height: 100%;
+  max-width: 50%;
 }
 
 /* Keyboard */
@@ -167,6 +169,7 @@ html * {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   width: 100%;
+  max-width: 100%;
 }
 .key {
   display: flex;
